@@ -1,0 +1,27 @@
+{
+	"name": "@igalaxy/polymc-playtime",
+	"version": "1.0.0",
+	"description": "Export your PolyMC playtime to a web server of your choice",
+	"main": "index.js",
+	"repository": "https://github.com/iGalaxyYT/polymc-playtime.git",
+	"author": "iGalaxyYT <contact@igalaxy.dev>",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsup",
+		"release": "yarn build && yarn npm publish"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.21",
+		"@types/node-fetch": "^2.6.1",
+		"@types/yargs": "^17.0.9",
+		"prettier": "^2.5.1",
+		"tsup": "^5.12.0"
+	},
+	"dependencies": {
+		"node-fetch": "2",
+		"yargs": "^17.3.1"
+	},
+	"bin": {
+		"polymc-playtime": "./dist/index.js"
+	}
+}
