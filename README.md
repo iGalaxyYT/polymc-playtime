@@ -17,5 +17,8 @@ yarn global add @igalaxy/polymc-playtime
    - `polymc-playtime --method=lanyard --lanyard-id="your-discord-user-id" --auth="your-lanyard-token"`
    - `polymc-playtime --method=endpoint --endpoint="https://your.custom/endpoint" --auth="your-auth-secret"`
 
-If using the endpoint method, the auth secret can be anything of your choice. It is simply used so you can authenticate the request serverside. \
+If using the endpoint method, the auth secret can be anything of your choice. It is simply used so you can authenticate the request serverside.
+
+With the Lanyard method, the playtime is stored in [Lanyard](https://github.com/Phineas/Lanyard) KV under the key `polymc_playtime`.
+
 Custom Commands in PolyMC appear to be broken for me on Windows, but I've tested this on macOS and it works fine. In theory should work fine in a Linux environment as well.
