@@ -21,4 +21,4 @@ If using the endpoint method, the auth secret can be anything of your choice. It
 
 With the Lanyard method, the playtime is stored in [Lanyard](https://github.com/Phineas/Lanyard) KV under the key `polymc_playtime`.
 
-Custom Commands in PolyMC appear to be broken for me on Windows, but I've tested this on macOS and it works fine. In theory should work fine in a Linux environment as well.
+Custom Commands in PolyMC appear to be broken for me on Windows, but I've tested this on macOS and it works fine. In theory this should work fine in a Linux environment as well.
