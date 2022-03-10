@@ -8,14 +8,21 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsup",
-		"release": "yarn build && yarn npm publish"
+		"release": "yarn build && yarn npm publish",
+		"lint": "eslint ./src/**/*.ts"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.21",
 		"@types/node-fetch": "^2.6.1",
 		"@types/yargs": "^17.0.9",
+		"@typescript-eslint/eslint-plugin": "^5.14.0",
+		"@typescript-eslint/parser": "^5.14.0",
+		"eslint": "^8.10.0",
+		"eslint-config-xo": "^0.40.0",
+		"eslint-config-xo-typescript": "^0.50.0",
 		"prettier": "^2.5.1",
-		"tsup": "^5.12.0"
+		"tsup": "^5.12.0",
+		"typescript": "^4.6.2"
 	},
 	"dependencies": {
 		"node-fetch": "2",
