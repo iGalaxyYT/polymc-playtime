@@ -16,8 +16,8 @@ yarn global add @igalaxy/polymc-playtime
 3. Find the location of the Node.js executable by doing `where node` on Windows or `which node` on macOS/Linux
 4. Open Settings > Custom Commands in PolyMC
 5. Set the Post-exit command to one of the following:
-   - `/usr/bin/env <node path> <polymc-playtime path> --path="$INST_DIR" --method=lanyard --lanyard-id="your-discord-user-id" --auth="your-lanyard-token"`
-   - `/usr/bin/env <node path> <polymc-playtime path> --path="$INST_DIR" --method=endpoint --endpoint="https://your.custom/endpoint" --auth="your-auth-secret"`
+   - `<node path> <polymc-playtime path> --path="$INST_DIR" --method=lanyard --lanyard-id="your-discord-user-id" --auth="your-lanyard-token"`
+   - `<node path> <polymc-playtime path> --path="$INST_DIR" --method=endpoint --endpoint="https://your.custom/endpoint" --auth="your-auth-secret"`
 
 If using the endpoint method, the auth secret can be anything of your choice. It is simply used so you can authenticate the request serverside.
 
