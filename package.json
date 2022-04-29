@@ -1,6 +1,6 @@
 {
 	"name": "@igalaxy/polymc-playtime",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Export your PolyMC playtime to a web server of your choice",
 	"main": "index.js",
 	"repository": "https://github.com/iGalaxyYT/polymc-playtime.git",
@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsup",
-		"release": "yarn build && yarn npm publish",
+		"release": "yarn build && npm publish",
 		"lint": "eslint ./src/**/*.ts"
 	},
 	"devDependencies": {

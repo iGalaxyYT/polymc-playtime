@@ -18,9 +18,10 @@ const argv = yargs(hideBin(process.argv))
 		'lanyard-id': { type: 'string', default: '' },
 		endpoint: { type: 'string', default: '127.0.0.1:3000/polymc' },
 		auth: { type: 'string', default: '', alias: 'authorization' },
+		path: { type: 'string', default: '' },
 	})
 	.parseSync();
-const cwd = process.cwd();
+const cwd = join(argv.path, '..');
 
 switch (argv.method) {
 	case 'lanyard': {
@@ -40,6 +41,12 @@ switch (argv.method) {
 	default: {
 		console.error("Please supply 'method' parameter (endpoint|lanyard)");
 	}
+}
+
+if (!argv.path) {
+	console.error(
+		"As of 1.1.0, polymc-playtime requires you to supply a 'path' parameter using the PolyMC $INST_DIR variable."
+	);
 }
 
 export function getPlaytime() {
