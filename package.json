@@ -1,6 +1,6 @@
 {
 	"name": "@igalaxy/polymc-playtime",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Export your PolyMC playtime to a web server of your choice",
 	"main": "index.js",
 	"repository": "https://github.com/iGalaxyYT/polymc-playtime.git",

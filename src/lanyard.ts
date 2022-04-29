@@ -2,10 +2,10 @@ import fetch from 'node-fetch';
 
 import { getPlaytime } from './index';
 
-export function lanyard(auth: string, id: string) {
+export function lanyard(auth: string, id: string, key: string) {
 	const playtime = getPlaytime();
 
-	fetch(`https://lanyard.rest/v1/users/${id}/kv/polymc_playtime`, {
+	fetch(`https://lanyard.rest/v1/users/${id}/kv/${key}`, {
 		method: 'PUT',
 		headers: {
 			Authorization: auth,

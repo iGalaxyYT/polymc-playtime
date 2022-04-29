@@ -19,13 +19,15 @@ const argv = yargs(hideBin(process.argv))
 		endpoint: { type: 'string', default: '127.0.0.1:3000/polymc' },
 		auth: { type: 'string', default: '', alias: 'authorization' },
 		path: { type: 'string', default: '' },
+		'lanyard-key': { type: 'string', default: 'polymc_playtime' },
 	})
 	.parseSync();
 const cwd = join(argv.path, '..');
 
 switch (argv.method) {
 	case 'lanyard': {
-		if (argv.lanyardId && argv.auth) lanyard(argv.auth, argv.lanyardId);
+		if (argv.lanyardId && argv.auth)
+			lanyard(argv.auth, argv.lanyardId, argv.lanyardKey);
 		else console.error("Please supply 'lanyard-id' and 'auth' parameters");
 
 		break;
@@ -62,13 +64,19 @@ export function getPlaytime() {
 
 			const lines = contents.split('\n');
 
-			playtime += Number(
+			const additionalPlaytime = Number(
 				lines
 					.find(x => x.startsWith('totalTimePlayed='))!
 					.replace('totalTimePlayed=', '')
 			);
+
+			console.log(`${file}: ${additionalPlaytime}s`);
+
+			playtime += additionalPlaytime;
 		}
 	});
+
+	console.log(`Total: ${playtime}`);
 
 	return playtime;
 }
