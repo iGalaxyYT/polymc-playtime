@@ -26,3 +26,5 @@ With the Lanyard method, the playtime is stored in [Lanyard](https://github.com/
 A custom key for Lanyard KV can be provided using the `lanyard-key` parameter. (e.g. if you want to use `minecraft_playtime` as the key instead of `polymc_playtime`, pass `--lanyard-key="minecraft_playtime"`)
 
 Apologies for the janky setup, for some reason PolyMC custom commands don't respect the PATH env variable, so exact executable locations are needed.
+
+[Example Usage](https://github.com/iGalaxyYT/games/blob/main/lib/hooks/minecraft.ts)
