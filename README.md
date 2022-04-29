@@ -1,6 +1,6 @@
 # ⏱️ polymc-playtime
 
-Export your PolyMC playtime to a web server of your choice
+Export your [PolyMC](https://polymc.org) playtime to a web server of your choice
 
 ## Setup
 
