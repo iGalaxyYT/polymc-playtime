@@ -5,7 +5,7 @@ import { getPlaytime } from './index';
 export function lanyard(auth: string, id: string, key: string) {
 	const playtime = getPlaytime();
 
-	fetch(`https://lanyard.rest/v1/users/${id}/kv/${key}`, {
+	fetch(`https://api.lanyard.rest/v1/users/${id}/kv/${key}`, {
 		method: 'PUT',
 		headers: {
 			Authorization: auth,
